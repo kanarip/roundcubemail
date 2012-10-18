@@ -1659,6 +1659,7 @@ $OUTPUT->add_handlers(array(
 
 // register action aliases
 $RCMAIL->register_action_map(array(
+    'cache_init' => 'cacheinit.inc',
     'preview' => 'show.inc',
     'print'   => 'show.inc',
     'moveto'  => 'move_del.inc',
