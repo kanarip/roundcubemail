@@ -1307,7 +1307,7 @@ function rcmail_address_string($input, $max=null, $linked=false, $addicon=null)
   $out = '';
 
   if ($addicon && !isset($_SESSION['writeable_abook'])) {
-    $_SESSION['writeable_abook'] = $RCMAIL->get_address_sources(true) ? true : false;
+    $_SESSION['writeable_abook'] = true;
   }
 
   foreach ($a_parts as $part) {
