@@ -280,6 +280,9 @@ function rcube_webmail()
           this.http_request('getunread', '');
         }
 
+        if (this.env.action == 'preview' && this.env.uid)
+          this.http_post('cache_init', {});
+
         // ask user to send MDN
         if (this.env.mdn_request && this.env.uid) {
           var mdnurl = '_uid='+this.env.uid+'&_mbox='+urlencode(this.env.mailbox);
